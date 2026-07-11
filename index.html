@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhavesh Datla | SAP Project Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #0f172a; /* Slate 900 */
+            --card-bg: #1e293b; /* Slate 800 */
+            --text-main: #f8fafc; /* Slate 50 */
+            --text-muted: #94a3b8; /* Slate 400 */
+            --accent: #38bdf8; /* Sky 400 */
+            --accent-hover: #0284c7; /* Sky 600 */
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+        }
+
+        /* Grid Layout for Tiles */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Individual Tile Styling */
+        .tile {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid var(--accent);
+        }
+
+        .tile:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        }
+
+        .tile h2 {
+            font-size: 1.25rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+            border-bottom: 1px solid #334155;
+            padding-bottom: 0.5rem;
+        }
+
+        .tile p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .tile ul {
+            padding-left: 1.2rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .tile li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Tag Styling */
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            background-color: rgba(56, 189, 248, 0.1);
+            color: var(--accent);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* Span 2 columns for wider content if needed */
+        .span-2 {
+            grid-column: span 2;
+        }
+
+        @media (max-width: 768px) {
+            .span-2 {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bhavesh Datla</h1>
+        <p>SAP S/4HANA Sales Consultant | Intercompany SME</p>
+    </header>
+
+    <div class="portfolio-grid">
+        
+        <!-- Tile 1: Project Overview -->
+        <div class="tile span-2">
+            <h2>Tetra Pak NCSP: Pilot 2 & Wave 1</h2>
+            <p><strong>Timeline:</strong> Go-Live April 2027 | <strong>Role:</strong> L2C Team Lead & Intercompany Sales SME</p>
+            <p>Leading the end-to-end design, build, and implementation of complex intercompany processes for Tetra Pak's Next Chapter Software Program. Managing configurations for both full S/4HANA (3-entity) scenarios and interim hybrid landscapes where the market company operates on ECC while trading and production entities sit on S/4HANA.</p>
+            <div class="tags">
+                <span class="tag">SAP S/4HANA</span>
+                <span class="tag">Greenfield Implementation</span>
+                <span class="tag">Global Template</span>
+            </div>
+        </div>
+
+        <!-- Tile 2: Leadership -->
+        <div class="tile">
+            <h2>Team Leadership & Collaboration</h2>
+            <p>Spearheading the Lead-to-Cash (L2C) workstream by managing a high-performing, cross-functional team of 5 members.</p>
+            <ul>
+                <li>Directing and collaborating with 4 implementation-partner consultants from Accenture.</li>
+                <li>Mentoring and grooming 1 junior analyst in advanced SAP SD configurations and project methodologies.</li>
+            </ul>
+            <div class="tags">
+                <span class="tag">Team Leadership</span>
+                <span class="tag">Vendor Management</span>
+            </div>
+        </div>
+
+        <!-- Tile 3: IDOC & Integrations -->
+        <div class="tile">
+            <h2>Advanced Interface Architecture</h2>
+            <p>Acting as the primary process designer for multi-layered system communications across three distinct corporate entities.</p>
+            <ul>
+                <li>Built and enhanced ALE IDOC interfaces for robust data transfer.</li>
+                <li>Engineered EDI IDOC integrations to support 3-layer intercompany sales scenarios seamlessly across the interim system landscape.</li>
+            </ul>
+            <div class="tags">
+                <span class="tag">ALE / EDI IDOC</span>
+                <span class="tag">System Integration</span>
+            </div>
+        </div>
+
+        <!-- Tile 4: Customization 1 -->
+        <div class="tile">
+            <h2>Custom Plant Determination</h2>
+            <p>Overcame standard SAP limitations to ensure accurate logistical routing during complex intercompany procurement.</p>
+            <ul>
+                <li>Designed and implemented custom plant determination logic within the trading company.</li>
+                <li>Logic is dynamically driven by a custom partner function explicitly defined on the market company’s Purchase Order.</li>
+            </ul>
+            <div class="tags">
+                <span class="tag">Custom Logic</span>
+                <span class="tag">Procurement</span>
+            </div>
+        </div>
+
+        <!-- Tile 5: Customization 2 & RPA (Wider Tile) -->
+        <div class="tile span-2">
+            <h2>WBS Automation via RPA Integration</h2>
+            <p>Engineered a highly sophisticated, automated WBS handling interface bridging SAP IDOCs and Robotic Process Automation (RPA).</p>
+            <ul>
+                <li><strong>Origin:</strong> Captured WBS data from the market company’s Project Network activity rather than the standard sales order.</li>
+                <li><strong>Routing & Masking:</strong> Passed data through the trading company via IDOC, remapped it to the product company’s specific WBS masking structure, and stored it in a custom sales-order text field.</li>
+                <li><strong>Automation:</strong> Triggered an RPA bot to read the qualifiers, auto-create the WBS/project in the product company, and assign it directly back to the sales order without manual intervention.</li>
+            </ul>
+            <div class="tags">
+                <span class="tag">RPA Bots</span>
+                <span class="tag">WBS Structure</span>
+                <span class="tag">Process Automation</span>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
