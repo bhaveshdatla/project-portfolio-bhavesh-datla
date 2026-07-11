@@ -11,6 +11,7 @@
             --text-main: #f8fafc; /* Slate 50 */
             --text-muted: #94a3b8; /* Slate 400 */
             --accent: #38bdf8; /* Sky 400 */
+            --accent-secondary: #818cf8; /* Indigo 400 */
             --accent-hover: #0284c7; /* Sky 600 */
         }
 
@@ -39,6 +40,19 @@
             font-size: 1.2rem;
         }
 
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--text-main);
+            margin-top: 4rem;
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #334155;
+            text-align: left;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         /* Grid Layout for Tiles */
         .portfolio-grid {
             display: grid;
@@ -56,6 +70,10 @@
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             border-top: 4px solid var(--accent);
+        }
+
+        .tile.pwc-tile {
+            border-top: 4px solid var(--accent-secondary);
         }
 
         .tile:hover {
@@ -105,7 +123,12 @@
             font-weight: 600;
         }
 
-        /* Span 2 columns for wider content if needed */
+        .pwc-tile .tag {
+            background-color: rgba(129, 140, 248, 0.1);
+            color: var(--accent-secondary);
+        }
+
+        /* Span 2 columns for wider content */
         .span-2 {
             grid-column: span 2;
         }
@@ -121,16 +144,17 @@
 
     <header>
         <h1>Bhavesh Datla</h1>
-        <p>SAP S/4HANA Sales Consultant | Intercompany SME</p>
+        <p>SAP S/4HANA Sales Consultant | Tech-Forward Process Engineer</p>
     </header>
 
+    <h2 class="section-title">Tetra Pak (NCSP) – Global Template Rollout</h2>
     <div class="portfolio-grid">
         
         <!-- Tile 1: Project Overview -->
         <div class="tile span-2">
-            <h2>Tetra Pak NCSP: Pilot 2 & Wave 1</h2>
-            <p><strong>Timeline:</strong> Go-Live April 2027 | <strong>Role:</strong> L2C Team Lead & Intercompany Sales SME</p>
-            <p>Leading the end-to-end design, build, and implementation of complex intercompany processes for Tetra Pak's Next Chapter Software Program. Managing configurations for both full S/4HANA (3-entity) scenarios and interim hybrid landscapes where the market company operates on ECC while trading and production entities sit on S/4HANA.</p>
+            <h2>Pilot 2 & Wave 1 Integration</h2>
+            <p><strong>Timeline:</strong> Target Go-Live April 2027[cite: 2] | <strong>Role:</strong> L2C Team Lead & Intercompany Sales SME[cite: 2]</p>
+            <p>Leading the end-to-end design, build, and implementation of complex intercompany processes for Tetra Pak's Next Chapter Software Program[cite: 2]. Managing configurations for both full S/4HANA (3-entity) scenarios and interim hybrid landscapes where the market company operates on ECC while trading and production entities sit on S/4HANA[cite: 2].</p>
             <div class="tags">
                 <span class="tag">SAP S/4HANA</span>
                 <span class="tag">Greenfield Implementation</span>
@@ -141,10 +165,10 @@
         <!-- Tile 2: Leadership -->
         <div class="tile">
             <h2>Team Leadership & Collaboration</h2>
-            <p>Spearheading the Lead-to-Cash (L2C) workstream by managing a high-performing, cross-functional team of 5 members.</p>
+            <p>Spearheading the Lead-to-Cash (L2C) workstream by managing a high-performing, cross-functional team of 5 members[cite: 2].</p>
             <ul>
-                <li>Directing and collaborating with 4 implementation-partner consultants from Accenture.</li>
-                <li>Mentoring and grooming 1 junior analyst in advanced SAP SD configurations and project methodologies.</li>
+                <li>Directing and collaborating with 4 implementation-partner consultants from Accenture[cite: 2].</li>
+                <li>Mentoring and grooming 1 junior analyst in advanced SAP SD configurations and project methodologies[cite: 2].</li>
             </ul>
             <div class="tags">
                 <span class="tag">Team Leadership</span>
@@ -155,10 +179,10 @@
         <!-- Tile 3: IDOC & Integrations -->
         <div class="tile">
             <h2>Advanced Interface Architecture</h2>
-            <p>Acting as the primary process designer for multi-layered system communications across three distinct corporate entities.</p>
+            <p>Acting as the primary process designer for multi-layered system communications across three distinct corporate entities[cite: 2].</p>
             <ul>
-                <li>Built and enhanced ALE IDOC interfaces for robust data transfer.</li>
-                <li>Engineered EDI IDOC integrations to support 3-layer intercompany sales scenarios seamlessly across the interim system landscape.</li>
+                <li>Built and enhanced ALE IDOC interfaces for robust data transfer[cite: 2].</li>
+                <li>Engineered EDI IDOC integrations to support 3-layer intercompany sales scenarios seamlessly across the interim system landscape[cite: 2].</li>
             </ul>
             <div class="tags">
                 <span class="tag">ALE / EDI IDOC</span>
@@ -169,10 +193,10 @@
         <!-- Tile 4: Customization 1 -->
         <div class="tile">
             <h2>Custom Plant Determination</h2>
-            <p>Overcame standard SAP limitations to ensure accurate logistical routing during complex intercompany procurement.</p>
+            <p>Overcame standard SAP limitations to ensure accurate logistical routing during complex intercompany procurement[cite: 2].</p>
             <ul>
-                <li>Designed and implemented custom plant determination logic within the trading company.</li>
-                <li>Logic is dynamically driven by a custom partner function explicitly defined on the market company’s Purchase Order.</li>
+                <li>Designed and implemented custom plant determination logic within the trading company[cite: 2].</li>
+                <li>Logic is dynamically driven by a custom partner function explicitly defined on the market company’s Purchase Order[cite: 2].</li>
             </ul>
             <div class="tags">
                 <span class="tag">Custom Logic</span>
@@ -183,16 +207,85 @@
         <!-- Tile 5: Customization 2 & RPA (Wider Tile) -->
         <div class="tile span-2">
             <h2>WBS Automation via RPA Integration</h2>
-            <p>Engineered a highly sophisticated, automated WBS handling interface bridging SAP IDOCs and Robotic Process Automation (RPA).</p>
+            <p>Engineered a highly sophisticated, automated WBS handling interface bridging SAP IDOCs and Robotic Process Automation (RPA)[cite: 2].</p>
             <ul>
-                <li><strong>Origin:</strong> Captured WBS data from the market company’s Project Network activity rather than the standard sales order.</li>
-                <li><strong>Routing & Masking:</strong> Passed data through the trading company via IDOC, remapped it to the product company’s specific WBS masking structure, and stored it in a custom sales-order text field.</li>
-                <li><strong>Automation:</strong> Triggered an RPA bot to read the qualifiers, auto-create the WBS/project in the product company, and assign it directly back to the sales order without manual intervention.</li>
+                <li><strong>Origin:</strong> Captured WBS data from the market company’s Project Network activity rather than the standard sales order[cite: 2].</li>
+                <li><strong>Routing & Masking:</strong> Passed data through the trading company via IDOC, remapped it to the product company’s specific WBS masking structure, and stored it in a custom sales-order text field[cite: 2].</li>
+                <li><strong>Automation:</strong> Triggered an RPA bot to read the qualifiers, auto-create the WBS/project in the product company, and assign it directly back to the sales order without manual intervention[cite: 2].</li>
             </ul>
             <div class="tags">
                 <span class="tag">RPA Bots</span>
                 <span class="tag">WBS Structure</span>
                 <span class="tag">Process Automation</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- NEW SECTION: PwC India Experience -->
+    <h2 class="section-title">PwC India – Select Consulting Engagements</h2>
+    <div class="portfolio-grid">
+        
+        <!-- PwC Tile 1: Inbrew -->
+        <div class="tile pwc-tile span-2">
+            <h2>Inbrew Beverages: Large-Scale Migration & Localization</h2>
+            <p><strong>Timeline:</strong> Feb 2024 - Dec 2024[cite: 2] | <strong>Role:</strong> SD Team Lead[cite: 2]</p>
+            <p>Led a 3-member team to transition the client from Tally ERP to SAP S/4HANA Private Cloud 2023[cite: 2]. Orchestrated complex reporting structures by developing an 8-level product hierarchy utilizing material groups 1-5 (SKU, size, pack type, brand)[cite: 2].</p>
+            <ul>
+                <li><strong>Heavy Customization:</strong> Successfully delivered 53 RICEFW objects on time with zero post-go-live critical defects[cite: 2].</li>
+                <li><strong>Tax & Compliance:</strong> Managed complex Excise, GST, and VAT compliance tailored to the highly regulated alcohol industry across 18 Indian states[cite: 2].</li>
+                <li><strong>E-Invoicing:</strong> Implemented real-time GST e-invoicing and IRN generation via third-party GSP API integrations[cite: 2].</li>
+            </ul>
+            <div class="tags">
+                <span class="tag">S/4HANA Migration</span>
+                <span class="tag">53 RICEFW Objects</span>
+                <span class="tag">FMCG/Alcohol</span>
+            </div>
+        </div>
+
+        <!-- PwC Tile 2: Megha City Gas -->
+        <div class="tile pwc-tile">
+            <h2>Megha City Gas: Automated Utility Billing</h2>
+            <p><strong>Timeline:</strong> Nov 2024 - May 2025[cite: 2] | <strong>Sector:</strong> Energy / Utilities[cite: 2]</p>
+            <p>Led the SD module for a greenfield implementation covering CNG, Biogas, and PNG distribution[cite: 2].</p>
+            <ul>
+                <li>Configured highly specific pricing procedures and order-based billing for CNG and Biogas fuel stations[cite: 2].</li>
+                <li>Engineered an automated billing solution triggered directly by meter readings for retail fuel stations, completely eliminating manual invoicing errors[cite: 2].</li>
+            </ul>
+            <div class="tags">
+                <span class="tag">Utility Billing</span>
+                <span class="tag">Pricing Procedures</span>
+            </div>
+        </div>
+
+        <!-- PwC Tile 3: Drillmec -->
+        <div class="tile pwc-tile">
+            <h2>Drillmec: Cost-Saving API Alternatives</h2>
+            <p><strong>Timeline:</strong> Nov 2023 - Feb 2024[cite: 2] | <strong>Sector:</strong> EPC[cite: 2]</p>
+            <p>Designed O2C processes and complex pricing procedures integrating both material and service-based pricing for EPC projects[cite: 2].</p>
+            <ul>
+                <li><strong>Innovation:</strong> Developed a custom, automated JSON generator for e-invoicing natively within SAP[cite: 2].</li>
+                <li><strong>Impact:</strong> Eliminated the need for costly third-party GSP integrations and API overhead, allowing the client to independently generate and print IRN and QR codes[cite: 2].</li>
+            </ul>
+            <div class="tags">
+                <span class="tag">JSON Generator</span>
+                <span class="tag">Service Pricing</span>
+            </div>
+        </div>
+
+        <!-- PwC Tile 4: MEIL (Span 2 to balance grid) -->
+        <div class="tile pwc-tile span-2">
+            <h2>MEIL: Precision EPC Calculations & Bug Fixing</h2>
+            <p><strong>Timeline:</strong> Nov 2022 - Dec 2023[cite: 2] | <strong>Role:</strong> Greenfield Implementation & AMS[cite: 2]</p>
+            <p>Managed SIT, UAT, and automation for bill-of-service sales processes in large-scale EPC infrastructure projects (BoQ, DMR, milestone billing)[cite: 2].</p>
+            <ul>
+                <li><strong>Precision Engineering:</strong> Developed a complex custom routine to permanently resolve net value and GST round-off discrepancies between sales orders and service entry sheets, effectively managing 9-12 decimal digit precision for quantities and rates[cite: 2].</li>
+                <li><strong>Adoption:</strong> Drove system adoption by conducting extensive training on Fiori apps and GUI systems for EPC operations teams[cite: 2].</li>
+            </ul>
+            <div class="tags">
+                <span class="tag">Precision Custom Routines</span>
+                <span class="tag">Milestone Billing</span>
+                <span class="tag">Fiori Training</span>
             </div>
         </div>
 
